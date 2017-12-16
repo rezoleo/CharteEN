@@ -2,13 +2,13 @@ before_install:
 - sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng texlive-lang-french latexmk latex-beamer
 script:
 - mkdir _build
-- latexmk -pdf -output-directory=_build -jobname=coucheLiaison CoucheLiaison.tex
+- latexmk -pdf -output-directory=_build -jobname=Charte_EN Charte_EN.tex
 deploy:
   provider: releases
   api_key:
     secure: Sy5yPbHUIbA1FYF+UpCVk8821o0RYr6ieYHaF3NwoIMccOFCiw/c77G48loj1M7pgURuDI3sKvXfkLq7Fio5YNaH2bbT4KZqd0RJATzS4jH+VIH230Ux560A1cufYN501e/CeR9WL0r+kHnG/+zNXvV48U0JWi5S1xuSzDs2rF+IgrhAQFNjbISH95Wyl/nUO7YwxLi0kyA5sFwTmM3Z0KMn/MbiFoKz/0HN8UyKsXAby+9QukD7xzI6Avnj0OFT/SiNtOGBiX/0RDf8kjk6WEhQZsyNWcbj9/FKMnDFvgR+N2M2TDV7Whx7zi6HGg8OOLWK1KEekXb3uSSrCrNnkGHdZS5eaiWj1pAeUMP19hz2B+v/1BB3QUykTZoA3l849N94iHlQhg1DDxy/atZieGhPqr5NYeagm2ZNlS2gy5/v3cN08Qj3W4fQe6looAwbhfUcRxbnBUd/0eVzNm6DYdTpCQOE3k/7vo9aYooKogAV3AhEw5FX1GSDT+APsakHc//xTzGFxnCXF/SyZoJ1Bi2rWVlwfUDw+DEYHjmYawvGaXOSjMi7aZXe+Uj/E/cTuxu6NK+S7a/qMah2MJzhiSVGXyar7DueTdqekY5CwqrXBQeV3cRNHZtF2KuNV3bZJlhl+e8+V4mKkWtlB4GEPjH+lz0txQwyhvW/8+tH1zE=
-  file: _build/CharteEN.pdf
+  file: _build/Charte_EN.pdf
   skip_cleanup: true
   on:
-    repo: rezoleo/CharteEN
+    repo: rezoleo/Charte_EN
 tags: true
